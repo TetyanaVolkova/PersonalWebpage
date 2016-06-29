@@ -15,7 +15,7 @@ body {
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
-/*    overflow: hidden;*/
+    overflow-x: hidden;
 }
 
 .clearfix {zoom: 1}
@@ -120,7 +120,9 @@ h2:after {
 /*-----------------------------------*/
 /* BUTTONS */
 /*-----------------------------------*/
-
+.btn-full, btn-ghost {
+    margin-left: 10%;
+}
 .btn:link,
 .btn:visited,
 input[type=submit] {
@@ -161,26 +163,28 @@ input[type=submit]:active {
 /*-----------------------------------*/
 
 header {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/5.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/5.jpg);
-    height: 100vh;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/5.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/5.jpg);
+    height: 70vh;
     background-size: cover;
-    background-position: center;
     background-attachment: fixed;
 }
 .backgrond-img-box {
     position: absolute;
     width: 1140px;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 70%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+.backgrond-img-box h1 {
+    padding-bottom: 5rem;
+}
 .avatar {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     float: left;
-    margin-top: 5%;
+    margin-top: 50px;
     background-size: cover;
     border-radius: 50%;
     background-position: center;
@@ -215,6 +219,19 @@ header {
 }
 
 
+/* Mobile navi */
+
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+.mobile-nav-icon {
+    font-size: 200%;
+    color: #fff;
+}
+
 /* Sticky navi */
 
 .sticky {
@@ -222,13 +239,24 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.98);
+    background-color: #efefef;
+    box-shadow: 0 2px 2px #4f4f4f;
+    z-index: 9999;
 }
-.main-nav { margin-top: 15px; }
+.sticky .main-nav { margin-top: 18px; }
 .sticky li a:link,
 .sticky li a:visited {
-    padding: 8px 0;
+    padding: 16px 0;
     color: #555;
+}
+.sticky .avatar {
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin: 5px 0;
+    border-radius: 50%;
+    background-position: center;
+    vertical-align: middle;
 }
 
 
@@ -331,8 +359,8 @@ header {
     border: 0;
 }
 .btn-app img {
-    height: 50px;
-    width: auto;
+    height: auto;
+    width: 120px;
     margin-right: 10px;
 }
 
@@ -442,7 +470,7 @@ cite img {
 
 
 .contact-form {
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
 }
 input[type=text],
@@ -463,8 +491,40 @@ input[type=checkbox] {
 *:focus {
     outline: none;
 }
-
-
+.map-box {
+    width: 100%;
+    height: 620px;
+    position: relative;
+}
+.map {
+    width: 60%;
+    height: 620px;
+    position: relative;
+    z-index: 0;
+}
+.form-box {
+    position: absolute;
+    width: 40%;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 10;
+    height: 620px;
+    padding-top: 40px;
+}
+.form-message {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+.success {
+    background-color: rgba(38, 191, 68, 0.7);
+}
+.error {background-color: rgba(209, 46, 46, 0.8);}
 /*-----------------------------------*/
 /* Footer */
 /*----- ------------------------------*/
@@ -529,4 +589,24 @@ footer p {
     color: #888;
     text-align: center;
     margin-top: 20px;
+}
+
+
+/*-----------------------------------*/
+/* Animation */
+/*-----------------------------------*/
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+    opacity: 0;
+    animation-duration: 1s;
+}
+.js--wp-4 {
+    animation-duration: 1s;
+}
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated {
+    opacity: 1;
 }

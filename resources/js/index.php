@@ -350,17 +350,18 @@
                 </div>
                 <div class="row">
                     <form method="post" action="mailer.php" class="contact-form">
+                       <div class="row">
                         
                        <?php 
-                       <div class="row">
-                            <div class="form-message success">
-                                Thank you your message has been send.
-                            </div>
-                            <div class="form-message error">
-                                Ops! Something went wrong. Please try again!
-                            </div>
-                        </div> 
+                        if($_GET['success'] == 1) {
+                            echo "<div class=\"form-message success\">Thank you your message has been send.</div>";
+                        }
+                        if($_GET['success'] == -1) {
+                            echo "<div class=\"form-message error\">Ops! Something went wrong. Please try again!
+                            </div>";
+                        }
                         ?>
+                        </div> 
                         
                         <div class="row">
                             <div class="col span-1-of-3">
