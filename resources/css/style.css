@@ -26,13 +26,17 @@ body {
     height: 0;
     visibility: hidden;
 }
+hr {
+    margin-left: 26%;
+    margin-right: 55%;
+}
 /*-----------------------------------*/
 /* REUSABLE COMPONENTS */
 /*-----------------------------------*/
 
 .row {
     max-width: 1140px;
-    margin: 0 auto;  
+    margin: 0 5%;  
 }
 section {
     padding: 80px 0;
@@ -120,8 +124,8 @@ h2:after {
 /*-----------------------------------*/
 /* BUTTONS */
 /*-----------------------------------*/
-.btn-full, btn-ghost {
-    margin-left: 10%;
+.btn-full, .btn-ghost {
+    margin-left: 7%;
 }
 .btn:link,
 .btn:visited,
@@ -140,7 +144,6 @@ input[type=submit] {
     background-color: #2980b9;
     border: 2px solid #e67e22;
     color: #fff;
-    margin-right: 15px;
 }
 .btn-full:hover,
 .btn-full:active,
@@ -163,34 +166,39 @@ input[type=submit]:active {
 /*-----------------------------------*/
 
 header {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/5.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/5.jpg);
-    height: 70vh;
+    background-color: #333;
+    height: 40vh;
     background-size: cover;
     background-attachment: fixed;
 }
 .backgrond-img-box {
     position: absolute;
     width: 1140px;
-    top: 40%;
+    top: 30%;
     left: 70%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 .backgrond-img-box h1 {
-    padding-bottom: 5rem;
+    padding-bottom: 1.5rem;
 }
 .avatar {
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     float: left;
     margin-top: 50px;
     background-size: cover;
     border-radius: 50%;
     background-position: center;
 }
-
-
+.avatar:hover {
+    border: 2px solid #e67e22;
+    transform: scale(1.1); 
+}
+.resume_header {
+    margin: 0 auto;
+    border-radius: 5px;
+}
 /* Main navi*/
 
 .main-nav {
@@ -609,4 +617,43 @@ footer p {
 .js--wp-2.animated,
 .js--wp-3.animated {
     opacity: 1;
+}
+
+
+/*-----------------------------------*/
+/* Animation */
+/*-----------------------------------*/
+
+.h1-title{
+    text-align: center;
+    margin-top: 3rem;
+    color: #e67e22;
+    letter-spacing: 20px;
+}
+.h4-title {
+    text-align: center;
+    font-weight: 400;
+    font-size: 90%;
+    color: #e67e22;
+    margin-top: 0.5rem; 
+}
+.experience {
+    font-weight: 400;
+    color: #e67e22;
+}
+.summary {
+    margin-bottom: .5rem;
+}
+.subheader {
+    font-weight: 500;
+    color: #517fa4;
+    text-decoration: underline;
+}
+.expiriencesum {
+    padding-left: 4rem;
+}
+.my-name {
+    text-align: center;
+    color: #e67e22;
+    font-size: 70%;
 }

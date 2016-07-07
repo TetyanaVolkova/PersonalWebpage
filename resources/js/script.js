@@ -85,18 +85,27 @@ $(document).ready(function() {
 
     var map = new GMaps({
         div: '.map',
-        lat: 39.1212852,
-        lng: -77.2368536,
-        zoom: 15
+        lat: 44.979152,
+        lng: -25.890697,
+        zoom: 2
 
 });
     
     map.addMarker({
-        lat: 39.1212852,
-        lng: -77.2368536,
-        title: 'Lima',
+        lat: 39.123682,
+        lng: -77.231511,
+        title: 'Gaithersburg, MD',
         infoWindow: {
-        content: '<p>I love one person who was born here.</p>'
+        content: '<p>I live here.</p>'
+        }
+    });
+    
+    map.addMarker({
+        lat: 49.386551,
+        lng: 36.214407,
+        title: 'Pervomaiskyi',
+        infoWindow: {
+        content: '<img src="resources/img/20160502_171708-1.jpg" style="width:100px;"> <p>I was born in Ukraine.</p>'
         }
     });
     

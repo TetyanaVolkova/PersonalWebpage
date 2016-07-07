@@ -94,6 +94,17 @@
     .btn-app img {
         margin-left: 25%;
     }
+    .btn:link,
+    .btn:visited,
+    input[type=submit] {
+        display: block;
+        margin-bottom: 1.5rem;
+        width: 7.75rem;
+    }
+    
+    .btn-full, .btn-ghost {
+        margin-left: 12%;
+    }
 
     .works-step { margin-bottom: 30px; }
     .works-step:last-of-type { margin-bottom: 30px; }
