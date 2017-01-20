@@ -57,7 +57,7 @@
     }
     .main-nav {
         float: left;
-        margin-top: 35px;
+        margin-top: 5px;
         margin-left: 25px;
     }
     .main-nav li {
@@ -68,9 +68,12 @@
         display: block;
         border: 0;
         padding: 10px 0;
-        font-size: 100%;
-        
+        font-size: 100%; 
     } 
+    .main-nav li a:hover,
+    .main-nav li a:active {
+        color: #e67e22;
+    }
     .sticky .main-nav { margin-top: 10px; }
     .sticky li a:link,
     .sticky li a:visited { padding: 10px 0; }
@@ -94,6 +97,7 @@
     .btn-app img {
         margin-left: 25%;
     }
+/*
     .btn:link,
     .btn:visited,
     input[type=submit] {
@@ -101,9 +105,10 @@
         margin-bottom: 1.5rem;
         width: 7.75rem;
     }
+*/
     
     .btn-full, .btn-ghost {
-        margin-left: 12%;
+        margin-left: 2%;
     }
 
     .works-step { margin-bottom: 30px; }

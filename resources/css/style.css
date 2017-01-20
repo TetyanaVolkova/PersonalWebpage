@@ -17,7 +17,9 @@ body {
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
 }
-
+.js--wp--bodyfix {
+    overflow: hidden !important;
+}
 .clearfix {zoom: 1}
 .clearfix:after {
     content: " ";
@@ -35,8 +37,8 @@ hr {
 /*-----------------------------------*/
 
 .row {
-    max-width: 1140px;
-    margin: 0 5%;  
+    max-width: 70vw;
+    margin: auto;  
 }
 section {
     padding: 80px 0;
@@ -57,7 +59,6 @@ h3 {
 }
 h1{
     margin: 0;
-    margin-bottom: 20px;
     color: #fff;
     font-size: 240%;
     word-spacing: 3px;
@@ -124,9 +125,11 @@ h2:after {
 /*-----------------------------------*/
 /* BUTTONS */
 /*-----------------------------------*/
-.btn-full, .btn-ghost {
-    margin-left: 7%;
+
+.bottonsWrapper a:first-child {
+    margin-right: 7%;
 }
+
 .btn:link,
 .btn:visited,
 input[type=submit] {
@@ -167,19 +170,18 @@ input[type=submit]:active {
 
 header {
     background-color: #333;
-    height: 40vh;
+    padding-bottom: 5vh;
     background-size: cover;
     background-attachment: fixed;
 }
-.backgrond-img-box {
-    position: absolute;
-    width: 1140px;
-    top: 30%;
-    left: 70%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+#index-title {
+    position: relative;
+    text-align: center;
 }
-.backgrond-img-box h1 {
+#resume-title h1 {
+    padding-bottom: .5rem;
+}
+#index-title h1 {
     padding-bottom: 1.5rem;
 }
 .avatar {
@@ -195,7 +197,8 @@ header {
     border: 2px solid #e67e22;
     transform: scale(1.1); 
 }
-.resume_header {
+#resume_header {
+    height: 285px;
     margin: 0 auto;
     border-radius: 5px;
 }
@@ -285,7 +288,8 @@ header {
 
 
 .section-content{
-   padding: 0; 
+    padding: 0;
+    border-right: 2vw solid #292828;
 }
 .help-showcase {
     list-style: none;
@@ -300,7 +304,17 @@ header {
     width: 100%;
     margin: 0;
     overflow: hidden;
-    background-color: #000;
+    background-color: #292828;
+}
+
+.first-row img {
+    padding-left: 2.5vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+.second-row img {
+    padding-bottom: 2vw;
+    padding-left: 2.5vw;
 }
 .help-photo img {
     opacity: 0.7;
@@ -337,10 +351,13 @@ header {
 }
 .steps-box:last-child {
     padding-left: 3%;
-    margin-top: 70px;
+    margin-top: 4.5vh !important;
+}
+.steps-box-none{
+    display: none;
 }
 .app-screen {
-    width: 40%;
+    width: 100%;
 }
 .works-step {
     margin-bottom: 50px;
@@ -352,14 +369,18 @@ header {
     color: #e67e22;
     border: 2px solid #e67e22;
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 3.5vw;
+    width: 3.5vw;
     text-align: center;
-    padding: 5px;
+    padding: 0.2vw;
     float: left;
     display: inline-block;
-    font-size: 150%;
+    font-size: 2vw;
     margin-right: 25px;
+}
+
+.bottonsWrapper {
+    margin: auto;
 }
 
 .btn-app:link,
@@ -402,6 +423,13 @@ blockquote {
     line-height: 145%;
     position: relative;
     margin-top: 40px;
+}
+blockquote a {
+    text-decoration: none;
+    color: #fff;
+}
+blockquote a {
+    
 }
 cite {
     font-size: 90%;
@@ -584,13 +612,13 @@ footer {
 .ion-social-facebook:hover {
     color: #3b5998;
 }
-.ion-social-twitter:hover {
+.ion-social-linkedin:hover {
     color: #80aced;
 }
 .ion-social-googleplus:hover {
     color: #dd4d39;
 }
-.ion-social-instagram:hover {
+.ion-social-github:hover {
     color: #517fa4;
 }
 footer p {
@@ -604,11 +632,17 @@ footer p {
 /* Animation */
 /*-----------------------------------*/
 
-.js--wp-1,
+
 .js--wp-2,
 .js--wp-3 {
     opacity: 0;
     animation-duration: 1s;
+}
+.js--wp-small {
+    display: block;
+}
+.js--wp--big {
+    display: none;
 }
 .js--wp-4 {
     animation-duration: 1s;
@@ -626,7 +660,6 @@ footer p {
 
 .h1-title{
     text-align: center;
-    margin-top: 3rem;
     color: #e67e22;
     letter-spacing: 20px;
 }
@@ -656,4 +689,166 @@ footer p {
     text-align: center;
     color: #e67e22;
     font-size: 70%;
+}
+
+
+/* Pig Game*/
+
+.do-not-show {
+    display: none;
+}
+.do-show {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.wrapper {
+    height: 70vh;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
+    float: left;
+    height: inherit;
+    padding: 8vmin 5vmin 2vmin;
+}
+
+
+
+/**********************************************
+*** PLAYERS
+**********************************************/
+
+.player-name {
+    font-size: 6vmin;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-top: 6vh;
+    margin-bottom: 4vh;
+    position: relative;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 12vmin;
+    font-weight: 100;
+    color: #EB4D4D;
+    margin-bottom: 7vmin;
+}
+
+.active { 
+    background-color: #f7f7f7;
+    height: 100%;
+}
+.active .player-name { font-weight: 300; }
+
+.active .player-name::after {
+    content: "\2022";
+    position: absolute;
+    color: #EB4D4D;
+    bottom: 0.5vh;
+    right: 0.01vw;
+}
+
+.player-current-box {
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 2vmin;
+    text-align: center;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 1.5vw;
+    font-size: 1.8vw;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 4vw;
+}
+
+button {
+    position: absolute;
+    width: 30vmin;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 3.2vmin;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { font-weight: 600; }
+button:hover i { margin-right: 20px; }
+
+button:focus {
+    outline: none;
+}
+
+i {
+    display: inline-block;
+    margin-right: 2vmin;
+    font-size: 3vmin;
+    line-height: 1;
+    vertical-align: text-top;
+    transition: margin 0.3s;
+}
+
+.js--pig-icon{
+    top: 6vmin;
+    position: absolute;
+    right: 1%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-new { top: 5vh;}
+.btn-roll { top: 47vh;}
+.btn-hold { top: 53vh;}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 28vh;
+    transform: translateX(-50%);
+    height: 14vmin;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.winner { background-color: #ffffff; }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+@media only screen and (max-width: 1200px) {
+        .row {
+            max-width: 90vw;
+    }
+}
+@media only screen and (max-width: 1023px){
+    .app-screen {
+        width: 100% !important;
+    }
 }

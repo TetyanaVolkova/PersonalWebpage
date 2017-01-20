@@ -38,7 +38,7 @@
 <!--        http://realfavicongenerator.net/ favicon genarator -->
         
      </head>
-    <body>
+    <body class="js--wp--body">
         <header>
             <nav>
                 <div class="row">
@@ -52,10 +52,12 @@
                     <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i> </a>
                 </div>
             </nav>
-            <div class="backgrond-img-box">
-                <h1>Front End Developer.</h1>
-                <a class="btn btn-full js--scroll-to-plans" href="#">Send request</a>
-                <a class="btn btn-ghost js--scroll-to-start" href="#">Learn more</a>
+            <div id="index-title">
+                <h1>UX/UI Developer.</h1>
+                <div class="bottonsWrapper">
+                    <a class="btn btn-full js--scroll-to-plans" href="#">Code Examples </a>
+                    <a class="btn btn-ghost js--scroll-to-start" href="#">Design Examples</a>
+                </div>
             </div>
         </header>
         <section class="section-features js--section-features" id="features">
@@ -100,12 +102,7 @@
         </section>
         
         <section class="section-content">
-            <ul class="help-showcase clearfix">
-                <li>
-                    <figure class="help-photo">
-                        <img src="resources/img/Warsaw-at-night-free-license-CC0.jpg" alt="Warsaw at night">
-                    </figure>
-                </li>
+            <ul class="help-showcase clearfix first-row">
                 <li>
                     <figure class="help-photo">
                         <img src="resources/img/people-apple-iphone-writing.jpg" alt="man people space desk">
@@ -118,12 +115,22 @@
                 </li>
                 <li>
                     <figure class="help-photo">
-                        <img src="resources/img/man-people-space-desk.jpg" alt="man people space desk">
+                        <img src="resources/img/startup-photos.jpg" alt="man people space desk">
+                    </figure>
+                </li>
+                <li>
+                    <figure class="help-photo">
+                        <img src="resources/img/man-people-space-desk.jpg" alt="man people space desk" id="first-row-last">
                     </figure>
                 </li>
             </ul>
             
-            <ul class="help-showcase clearfix">
+            <ul class="help-showcase clearfix second-row js--wp-img">
+                <li>
+                    <figure class="help-photo">
+                        <img src="resources/img/Warsaw-at-night-free-license-CC0.jpg" alt="Warsaw at night">
+                    </figure>
+                </li>
                 <li>
                     <figure class="help-photo">
                         <img src="resources/img/headerimg.jpg" alt="notebook">
@@ -131,17 +138,12 @@
                 </li>
                 <li>
                     <figure class="help-photo">
-                        <img src="resources/img/people-apple-iphone-writing.jpg" alt="man people space desk">
+                        <img src="resources/img/DSCF8424.jpg" alt="man people space desk">
                     </figure>
                 </li>
                 <li>
                     <figure class="help-photo">
-                        <img src="resources/img/startup-photos.jpg" alt="man people space desk">
-                    </figure>
-                </li>
-                <li>
-                    <figure class="help-photo">
-                        <img src="resources/img/startup-photos.jpg" alt="man people space desk">
+                        <img src="resources/img/13984333451_ff0bbde7ff_k.jpg" alt="man people space desk" id="second-row-last">
                     </figure>
                 </li>
             </ul>
@@ -152,9 +154,39 @@
                 <h2>How it works &mdash; Simple as 1, 2 , 3</h2>
             </div>
             <div class="row">
-                <div class="col span-1-of-2 steps-box">
-                    <img src="resources/img/app-iPhone.png" alt="Picture" class="app-screen js--wp-2"/>
+                <div class="col span-1-of-2 steps-box js--wp-2 js--wp-small">
+                  <!--  <img src="resources/img/app-iPhone.png" alt="Picture" class="app-screen js--wp-2"/> -->
+                    <img src="resources/img/app-iPhone.png" alt="Picture" class="app-screen"/>
+                    
                 </div>
+                
+        <div class="wrapper clearfix js--pig--game do-not-show">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <a class="js--pig-icon"><i class="ion-close-round"></i> </a>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            
+            <img src="resources/img/dice-5.png" alt="Dice" class="dice">
+        </div>
+                
                 <div class="col span-1-of-2 steps-box">
                     <div class="works-step">
                         <div>1</div>
@@ -162,16 +194,18 @@
                     </div>
                     <div class="works-step">
                         <div>2</div>
-                        <p>FSADFASDFGASGF  adsf dksfjasdkfjsaflkj</p>
+                        <p>The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn.</p>
                     </div>
                     <div class="works-step">
                         <div>3</div>
-                        <p>Aadf dfsdAsdf dksfjasdkfjsaflkj</p>
+                        <p>The first player to reach 100 points on GLOBAL score wins the game.</p>
                     </div>
+<!--
                     <div id="app-links">
                         <a href="#" class="btn-app"><img src="resources/img/download-app.svg" alt="button for iphone"></a>
                         <a href="#" class="btn-app"><img src="resources/img/download-app-android.png" alt="button for android"></a>
                     </div>
+-->
                 </div>
             </div>
         </section>
@@ -249,25 +283,40 @@
         
         <section class="section-testimonials">
             <div class="row">
-                <h2>Our customers can't live without us</h2>
+                <h2>Quotes from people I deference.</h2>
             </div>
             <div class="row">
                 <div class="col span-1-of-3">
                     <blockquote>
-                        Omnifood is just awesome! I just launched a startup which leaves me with no time for cooking, so Omnifood is a life-saver. Now that I got used to it, I couldn't live without my daily meals!
-                    <cite><img src="resources/img/customer-1.jpg"> Alberto Duncan</cite>
+                        <div> &#8216;Imagination is more important than knowledge.&#8217; </div>
+                        <div>&#8216;Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius &#45;&#45; and a lot of courage &#45;&#45; to move in the opposite direction.&#8217;</div>
+                        <div>&#8216;The important thing is not to stop questioning. Curiosity has its own reason for existing.&#8217;</div>
+                        <a href="https://en.wikipedia.org/wiki/Albert_Einstein" alt="Albert einstein" target="_blank">
+                            <cite><img src="resources/img/customer-1.jpg">Albert Einstein</cite>
+                        </a>
                     </blockquote>
                 </div>
                 <div class="col span-1-of-3">
                     <blockquote>
-                        Inexpensive, healthy and great-tasting meals, delivered right to my home. We have lots of food delivery here in Lisbon, but no one comes even close to Omifood. Me and my family are so in love!
-                    <cite><img src="resources/img/customer-2.jpg"> Joana Silva </cite>
+                       <div>  &#8216;Joy is prayer; joy is strength: joy is love; joy is a net of love by which you can catch souls.&#8217; </div>
+                        <div>&#8216;The miracle is not that we do this work, but that we are happy to do it.&#8217;</div>
+                        <div>&#8216;Not all of us can do great things. But we can do small things with great love.&#8217;</div>
+                        <div>&#8216;What can you do to promote world peace? Go home and love your family.&#8217;</div>
+                        <a href="https://en.wikipedia.org/wiki/Mother_Teresa" alt="Albert einstein" target="_blank">
+                            <cite><img src="resources/img/customer-3.jpg">Mother Teresa</cite>
+                        </a>
                     </blockquote>
                 </div>
                 <div class="col span-1-of-3">
+                    
                     <blockquote>
-                        I was looking for a quick and easy food delivery service in San Franciso. I tried a lot of them and ended up with Omnifood. Best food delivery service in the Bay Area. Keep up the great work!
-                    <cite><img src="resources/img/customer-3.jpg">Milton Chapman</cite>
+                       <div>  &#8216;Tell me and I forget. Teach me and I remember. Involve me and I learn.&#8217; </div>
+                        <div>&#8216;The heart of a fool is in his mouth, but the mouth of a wise man is in his heart.&#8217;</div>
+                        <div>&#8216;An investment in knowledge always pays the best interest.&#8217;</div>
+                        <div>&#8216;Work as if you were to live a thousand years, play as if you were to die tomorrow.&#8217;</div>
+                        <a href="https://en.wikipedia.org/wiki/Benjamin_Franklin" alt="Albert einstein" target="_blank">
+                            <cite><img src="resources/img/customer-2.jpg">Benjamin Franklin</cite>
+                        </a>
                     </blockquote>
                 </div>
             </div>
@@ -282,7 +331,7 @@
                         <div>
                             <h3>Premium</h3>
                             <p class="plan-price">$399 <span> / month </span></p>
-                            <p class="plan-price-meal">That'’'s only 13.30$ per meal</p>
+                            <p class="plan-price-meal">That&#8217;s only 13.30$ per meal</p>
                         </div>
                         <div>
                             <ul>
@@ -303,7 +352,7 @@
                         <div>
                             <h3>Pro</h3>
                             <p class="plan-price">149$ <span> / month </span></p>
-                            <p class="plan-price-meal">That'’'s only 14.90$ per meal</p>
+                            <p class="plan-price-meal">That&#8217;s only 14.90$ per meal</p>
                         </div>
                         <div>
                             <ul>
@@ -448,10 +497,10 @@
                 </div>
                 <div class="col span-1-of-2">
                     <ul class="social-links">
-                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
-                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
-                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-                        <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/TVolkovaT"  target="_blank"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/tetyana-volkova-932745ab"  target="_blank"><i class="ion-social-linkedin"></i></a></li>
+                        <li><a href="https://plus.google.com/117556711718904758948"  target="_blank"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="https://github.com/TetyanaVolkova"  target="_blank"><i class="ion-social-github"></i></a></li>
                     </ul>
                 </div>
             </div>
