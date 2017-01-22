@@ -21,8 +21,6 @@
     }
     
     .steps-box { margin-top: 40px; }
-    .steps-box:last-child { margin-top: 10%; }
-    .works-step { margin-bottom: 10%; }
     .works-step:last-of-type { margin-bottom: 60px; }
     
     .app-screen { width: 50%; }
@@ -87,7 +85,6 @@
         width: 100%;
         margin-left: 0%;
     }
-    .steps-box .works-step { margin-left: 20%;}
     .steps-box:first-child { text-align: center; }
     .works-step div {
         height: 35px;
@@ -110,8 +107,7 @@
     .btn-full, .btn-ghost {
         margin-left: 2%;
     }
-
-    .works-step { margin-bottom: 30px; }
+    
     .works-step:last-of-type { margin-bottom: 30px; }
     
     .avatar {

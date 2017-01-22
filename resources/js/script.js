@@ -15,7 +15,7 @@ $(document).ready(function() {
     /* Scroll on buttons */
     
     $('.js--scroll-to-plans').click(function() {
-        $('html, body').animate({scrollTop: $('.section-steps').offset().top}, 2000)
+        $('html, body').animate({scrollTop: $('.second-row').offset().top}, 2000)
     });
     
     $('.js--scroll-to-start').click(function() {
@@ -86,8 +86,10 @@ $(document).ready(function() {
             $('.js--wp-2').addClass('js--wp--big');
             $('.js--wp-2').removeClass('js--wp-small');
             $('.js--pig--game').addClass('do-show');
-            $('.js--pig--game').removeClass('.do-not-show');
-            $('.js--wp--body').addClass('.js--wp--bodyfix');
+            $('.js--pig--game').removeClass('do-not-show');
+            $('.js--wp--body').addClass('js--wp--bodyfix');
+            $('.steps-box').removeClass('span-1-of-2');
+            $('.steps-box').addClass('rules100');
         }
     });
     
@@ -95,31 +97,57 @@ $(document).ready(function() {
 
     var map = new GMaps({
         div: '.map',
-        lat: 44.979152,
-        lng: -25.890697,
-        zoom: 2
+        lat: 39.123682,
+        lng: -77.231511,
+        zoom: 8
 
 });
     
     map.addMarker({
         lat: 39.123682,
         lng: -77.231511,
-        title: 'Gaithersburg, MD',
+        title: 'My Home',
         infoWindow: {
-        content: '<p>I live here.</p>'
+        content: '<img src="resources/img/home.jpg" style="width:100px;"> <p style="text-align:center">I live here <br> This is my home.</p>'
         }
     });
     
     map.addMarker({
         lat: 49.386551,
         lng: 36.214407,
-        title: 'Pervomaiskyi',
+        title: 'Home Town',
         infoWindow: {
-        content: '<img src="resources/img/20160502_171708-1.jpg" style="width:100px;"> <p>I was born in Ukraine.</p>'
+        content: '<img src="resources/img/20160502_171708-1.jpg" style="width:100px;"> <p style="text-align:center">I was born in Ukraine.</p>'
         }
     });
     
+    map.addMarker({
+        lat: 39.059337,
+        lng: -77.120135,
+        title: 'MY Work',
+        infoWindow: {
+        content: '<img src="resources/img/NETE.jpg" style="width:100px;"> <p style="text-align:center">My current job.<br><a href="https://www.nete.com" target="_blank">NETE</a></p>'
+        }
+    });
     
+   
+    
+    
+    
+//    $('.mapPins').click(function() {
+//        var lats = $('#lats').val();
+//        var lngs = $('#lngs').val();
+//        console.log(lats);
+//        map.addMarker({
+//        lat: lats,
+//        lng: lngs,
+//        title: 'Gaithersburg, MD',
+//        infoWindow: {
+//        content: '<p>I live here.</p>'
+//        }
+//    });
+//    
+//    });
     
 });
 
@@ -240,14 +268,34 @@ function nextPlayer() {
     document.querySelector('.dice').style.display = 'none';
 }
 
-$('.js--pig-icon').click(function() {
+var closePreview = $('.js--pig-icon');
+
+closePreview.click(function() {
     if ($('.js--pig--game').hasClass('do-show'))
     $('.js--pig--game').addClass('do-not-show');
     $('.js--pig--game').removeClass('do-show');
     $('.js--wp-2').removeClass('js--wp--big');
     $('.js--wp-2').addClass('js--wp-small');
-    $('.js--wp--body').removeClass('.js--wp--bodyfix');
+    $('.js--wp--body').removeClass('js--wp--bodyfix');
+    $('.steps-box').addClass('span-1-of-2');
+    $('.steps-box').removeClass('rules100');
     
 });
+
+    $(window).scroll(function() {
+       var hT = $('.section-testimonials').offset().top,
+           hH = $('.section-testimonials').outerHeight(),
+           wH = $(window).height(),
+           wS = $(this).scrollTop();
+       if (wS > (hT+hH-wH)){
+        $('.js--pig--game').addClass('do-not-show');
+        $('.js--pig--game').removeClass('do-show');
+        $('.js--wp-2').removeClass('js--wp--big');
+        $('.js--wp-2').addClass('js--wp-small');
+        $('.js--wp--body').removeClass('js--wp--bodyfix');
+        $('.steps-box').addClass('span-1-of-2');
+        $('.steps-box').removeClass('rules100');
+       }
+    }); 
 
 
