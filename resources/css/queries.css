@@ -75,7 +75,7 @@
     .sticky .main-nav { margin-top: 10px; }
     .sticky li a:link,
     .sticky li a:visited { padding: 10px 0; }
-    .sticky .mobile-nav-icon { margin-top: 10px; }
+    .sticky .mobile-nav-icon { margin-top: 25px; }
     .sticky .mobile-nav-icon i { color: #555; }
     
     h1 { font-size: 180%; }
@@ -108,6 +108,10 @@
         margin-left: 2%;
     }
     
+    .works-step {
+        margin-bottom: 4vh;
+    }
+    
     .works-step:last-of-type { margin-bottom: 30px; }
     
     .avatar {
@@ -116,6 +120,9 @@
         width: 100px;
     }
     
+    .bottonsWrapper a:first-child {
+        margin: 2vh 0;
+    }
     
     .map-box {
     width: 100%;

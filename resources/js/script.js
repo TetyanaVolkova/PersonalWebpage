@@ -19,7 +19,7 @@ $(document).ready(function() {
     });
     
     $('.js--scroll-to-start').click(function() {
-        $('html, body').animate({scrollTop: $('.js--section-features').offset().top}, 2000)
+        $('html, body').animate({scrollTop: $('.franklin').offset().top}, 2000)
     });
     
     /* Navigation scroll */
@@ -52,7 +52,7 @@ $(document).ready(function() {
         offset: '50%'
     });
     
-    $('.js--wp-3').waypoint(function(direction) {
+    $('.section-cities').waypoint(function(direction) {
         $('.js--wp-3').addClass('animated fadeIn');
     }, {
         offset: '50%'
@@ -99,7 +99,7 @@ $(document).ready(function() {
         div: '.map',
         lat: 39.123682,
         lng: -77.231511,
-        zoom: 8
+        zoom: 3
 
 });
     
@@ -108,7 +108,7 @@ $(document).ready(function() {
         lng: -77.231511,
         title: 'My Home',
         infoWindow: {
-        content: '<img src="resources/img/home.jpg" style="width:100px;"> <p style="text-align:center">I live here <br> This is my home.</p>'
+        content: '<img src="resources/img/home.jpg" style="width:150px; margin:auto"> <p style="text-align:center">I live here <br> This is my home.</p>'
         }
     });
     
@@ -117,7 +117,7 @@ $(document).ready(function() {
         lng: 36.214407,
         title: 'Home Town',
         infoWindow: {
-        content: '<img src="resources/img/20160502_171708-1.jpg" style="width:100px;"> <p style="text-align:center">I was born in Ukraine.</p>'
+        content: '<img src="resources/img/20160502_171708-1.jpg" style="width:150px; margin:auto"> <p style="text-align:center">I was born in Ukraine.</p>'
         }
     });
     
@@ -126,7 +126,34 @@ $(document).ready(function() {
         lng: -77.120135,
         title: 'MY Work',
         infoWindow: {
-        content: '<img src="resources/img/NETE.jpg" style="width:100px;"> <p style="text-align:center">My current job.<br><a href="https://www.nete.com" target="_blank">NETE</a></p>'
+        content: '<img src="resources/img/NETE.jpg" style="width:150px; margin:auto"> <p style="text-align:center">My current job.<br><a href="https://www.nete.com" target="_blank">NETE</a></p>'
+        }
+    });
+    
+    map.addMarker({
+        lat: 24.572565,
+        lng: -81.770993,
+        title: 'Vacation on Key West',
+        infoWindow: {
+        content: '<img src="resources/img/vacation.jpg" style="width:150px; margin:auto"> <p style="text-align:center"> I have been at Key West<br/>For the New 2017 Year.</p>'
+        }
+    });
+    
+    map.addMarker({
+        lat: 34.746778,
+        lng: -111.968708,
+        title: 'Sedona Mago Retreat',
+        infoWindow: {
+        content: '<img src="resources/img/sedona.jpg" style="width:150px; margin:auto"> <p style="text-align:center">Sedona Mago Retreat.<br><a href="https://www.flickr.com/photos/91598970@N05/albums/72157644260023204" target="_blank">Mago Garden</a></p>'
+        }
+    });
+    
+    map.addMarker({
+        lat: 49.316814,
+        lng: -56.119492,
+        title: 'Newfoundland, Canada',
+        infoWindow: {
+        content: '<img src="resources/img/sedona.jpg" style="width:150px; margin:auto"> <p style="text-align:center">Newfoundland, Canada.<br><a href="https://www.flickr.com/photos/91598970@N05/albums/72157644260023204" target="_blank">Hiking in Newfoundland.</a></p>'
         }
     });
     
