@@ -97,8 +97,8 @@ $(document).ready(function() {
 
     var map = new GMaps({
         div: '.map',
-        lat: 39.123682,
-        lng: -77.231511,
+        lat: 26.619879,
+        lng: -35.413152,
         zoom: 3
 
 });
@@ -117,7 +117,7 @@ $(document).ready(function() {
         lng: 36.214407,
         title: 'Home Town',
         infoWindow: {
-        content: '<img src="resources/img/20160502_171708-1.jpg" style="width:150px; margin:auto"> <p style="text-align:center">I was born in Ukraine.</p>'
+        content: '<img src="resources/img/20160502_171708-1.jpg" style="width:150px; margin:auto"> <p style="text-align:center">I was born in Ukraine</p>'
         }
     });
     
@@ -126,7 +126,7 @@ $(document).ready(function() {
         lng: -77.120135,
         title: 'MY Work',
         infoWindow: {
-        content: '<img src="resources/img/NETE.jpg" style="width:150px; margin:auto"> <p style="text-align:center">My current job.<br><a href="https://www.nete.com" target="_blank">NETE</a></p>'
+        content: '<img src="resources/img/NETE.jpg" style="width:150px; margin:auto"> <p style="text-align:center">My current job<br><a href="https://www.nete.com" target="_blank">NETE</a></p>'
         }
     });
     
@@ -135,7 +135,7 @@ $(document).ready(function() {
         lng: -81.770993,
         title: 'Vacation on Key West',
         infoWindow: {
-        content: '<img src="resources/img/vacation.jpg" style="width:150px; margin:auto"> <p style="text-align:center"> I have been at Key West<br/>For the New 2017 Year.</p>'
+        content: '<img src="resources/img/vacation.jpg" style="width:150px; margin:auto"> <p style="text-align:center"> I have been at Key West<br/>For the New 2017 Year</p>'
         }
     });
     
@@ -144,7 +144,7 @@ $(document).ready(function() {
         lng: -111.968708,
         title: 'Sedona Mago Retreat',
         infoWindow: {
-        content: '<img src="resources/img/sedona.jpg" style="width:150px; margin:auto"> <p style="text-align:center">Sedona Mago Retreat.<br><a href="https://www.flickr.com/photos/91598970@N05/albums/72157644260023204" target="_blank">Mago Garden</a></p>'
+        content: '<img src="resources/img/sedona.jpg" style="width:150px; margin:auto"> <p style="text-align:center">Sedona Mago Retreat<br><a href="https://www.flickr.com/photos/91598970@N05/albums/72157644260023204" target="_blank">Mago Garden</a></p>'
         }
     });
     
@@ -153,7 +153,43 @@ $(document).ready(function() {
         lng: -56.119492,
         title: 'Newfoundland, Canada',
         infoWindow: {
-        content: '<img src="resources/img/sedona.jpg" style="width:150px; margin:auto"> <p style="text-align:center">Newfoundland, Canada.<br><a href="https://www.flickr.com/photos/91598970@N05/albums/72157644260023204" target="_blank">Hiking in Newfoundland.</a></p>'
+        content: '<img src="resources/img/newfoundland.jpg" style="width:150px; margin:auto"> <p style="text-align:center">Newfoundland, Canada<br><a href="https://www.flickr.com/photos/91598970@N05/albums/72157675893570724" target="_blank">Hiking in Newfoundland</a></p>'
+        }
+    });
+    
+    map.addMarker({
+        lat: 37.773836,
+        lng: -119.561997,
+        title: 'Yosemite National Park',
+        infoWindow: {
+        content: '<img src="resources/img/yosemite.jpg" style="width:150px; margin:auto"> <p style="text-align:center">Hiking in Yosemite National Park<br><a href="https://www.flickr.com/photos/91598970@N05/albums/72157644260023204" target="_blank">Yosemite National Park</a></p>'
+        }
+    });
+    
+    map.addMarker({
+        lat: 40.790754,
+        lng: -119.203681,
+        title: 'Burning Man, Black Rock Desert',
+        infoWindow: {
+        content: '<img src="resources/img/burningMan.jpg" style="width:150px; margin:auto"> <p style="text-align:center">Burning Man, Black Rock Desert<br><a href="https://www.flickr.com/photos/91598970@N05/albums/72157675886841574" target="_blank">Burning Man</a></p>'
+        }
+    });
+    
+    map.addMarker({
+        lat: 15.512559,
+        lng: -61.362928,
+        title: 'Dominica',
+        infoWindow: {
+        content: '<img src="resources/img/dominica.jpg" style="width:150px; margin:auto"> <p style="text-align:center">Vacation on Dominica</p>'
+        }
+    });
+    
+    map.addMarker({
+        lat: 30.870349,
+        lng: -81.418915,
+        title: 'Cumberland Island, Georgia',
+        infoWindow: {
+        content: '<img src="resources/img/cumberland.jpg" style="width:150px; margin:auto"> <p style="text-align:center">Vacation on Cumberland Island, Georgia<br><a href="https://www.flickr.com/photos/91598970@N05/albums/72157679594121625/with/31686635154/" target="_blank">Cumberland Island pics</a></p>'
         }
     });
     
