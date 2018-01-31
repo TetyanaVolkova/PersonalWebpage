@@ -23,20 +23,20 @@ $(document).ready(function() {
     });
     
     /* Navigation scroll */
-    $(function() {
-      $('a[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html, body').animate({
-              scrollTop: target.offset().top
-            }, 2000);
-            return false;
-          }
-        }
-      });
-    });
+//    $(function() {
+//      $('a[href*="#"]:not([href="#"])').click(function() {
+//        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+//          var target = $(this.hash);
+//          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+//          if (target.length) {
+//            $('html, body').animate({
+//              scrollTop: target.offset().top
+//            }, 2000);
+//            return false;
+//          }
+//        }
+//      });
+//    });
     
     /* Animations on scroll */
     
@@ -345,21 +345,21 @@ closePreview.click(function() {
     
 });
 
-    $(window).scroll(function() {
-       var hT = $('.section-testimonials').offset().top,
-           hH = $('.section-testimonials').outerHeight(),
-           wH = $(window).height(),
-           wS = $(this).scrollTop();
-       if (wS > (hT+hH-wH)){
-        $('.js--pig--game').addClass('do-not-show');
-        $('.js--pig--game').removeClass('do-show');
-        $('.js--wp-2').removeClass('js--wp--big');
-        $('.js--wp-2').addClass('js--wp-small');
-        $('.js--wp--body').removeClass('js--wp--bodyfix');
-        $('.steps-box').addClass('span-1-of-2');
-        $('.steps-box').removeClass('rules100');
-       }
-    }); 
+//    $(window).scroll(function() {
+//       var hT = $('.section-testimonials').offset().top,
+//           hH = $('.section-testimonials').outerHeight(),
+//           wH = $(window).height(),
+//           wS = $(this).scrollTop();
+//       if (wS > (hT+hH-wH)){
+//        $('.js--pig--game').addClass('do-not-show');
+//        $('.js--pig--game').removeClass('do-show');
+//        $('.js--wp-2').removeClass('js--wp--big');
+//        $('.js--wp-2').addClass('js--wp-small');
+//        $('.js--wp--body').removeClass('js--wp--bodyfix');
+//        $('.steps-box').addClass('span-1-of-2');
+//        $('.steps-box').removeClass('rules100');
+//       }
+//    }); 
 
 // Clock
 
@@ -380,5 +380,14 @@ closePreview.click(function() {
   }
   setInterval(setDate, 1000);
   setDate();
+
+// My Information
+
+	$('.anim').on('click', function(e){
+        e.preventDefault();
+        console.log(e);
+		var anim = $(this).attr('data-anim');
+		$('#cube').removeClass().addClass(anim);
+	});
 
 
