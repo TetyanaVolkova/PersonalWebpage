@@ -470,7 +470,7 @@ header {
 }
 
 /*-----------------------------------*/
-/* CITIES */
+/* Design */
 /*-----------------------------------*/
 
 .box img {
@@ -552,10 +552,6 @@ cite img {
     vertical-align: middle;
 }
 
-/*-----------------------------------*/
-/* SIGN UP */
-/*----- ------------------------------*/
-
 
 .section-plans {
     background-color: #f4f4f4;
@@ -599,40 +595,6 @@ cite img {
 .plan-box ul li {
     padding: 5px 0;
 }
-
-
-/*-----------------------------------*/
-/* SIGN UP Form */
-/*----- ------------------------------*/
-
-
-.contact-form {
-    width: 90%;
-    margin: 0 auto;
-}
-input[type=text],
-input[type=email],
-select,
-textarea {
-    width: 100%;
-    padding: 7px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-}
-textarea {
-    height: 100px;
-}
-input[type=checkbox] {
-    margin: 10px 5px 10px 0;
-}
-*:focus {
-    outline: none;
-}
-
-.section-form {
-    width: 80%;
-    margin: auto !important;
-}
 .map-box {
     width: 100%;
     height: 65vh;
@@ -657,19 +619,6 @@ input[type=checkbox] {
     height: 620px;
     padding-top: 40px;
 }
-.form-message {
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px;
-    border-radius: 3px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
-}
-.success {
-    background-color: rgba(38, 191, 68, 0.7);
-}
-.error {background-color: rgba(209, 46, 46, 0.8);}
 /*-----------------------------------*/
 /* Footer */
 /*----- ------------------------------*/
@@ -834,6 +783,64 @@ footer p {
     padding: 8vmin 5vmin 2vmin;
 }
 
+/**********************************************
+*** Clock
+**********************************************/
+
+.clock-container {
+  position: relative;
+  margin: 30px 0;
+  height: 100%;
+  width: 100%;
+}
+.clock {
+  width: 40vmin;
+  height: 40vmin;
+  border: 4px solid #2980b9;
+  box-shadow: 1px 1px 30px 5px;
+  margin: auto;
+  border-radius: 50%;
+  padding: 3vw;
+  background-image: url(../img/clock.png);
+  background-size: 40vmin 40vmin;
+}
+.center-container {
+  position: absolute;
+    top: 19.5vmin;
+  display: flex;
+  width: 100%;
+}
+.clock-center {
+  margin: auto;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  background: #e67e22;
+}
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.hand {
+  width: 50%;
+  background: #e67e22;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: liner;
+}
+.hour-hand {
+  height: 3%;
+}
+.min-hand {
+  height: 2%;
+}
+.sec-hand {
+  height: 1%;
+}
 
 
 /**********************************************
